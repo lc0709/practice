@@ -15,7 +15,7 @@ public class FrameToolManager {
     private static final Location ZERO = new Location(WorldManager.OVERWORLD,0.0f,0.0f,0.0f);
     private static final Pair<Location, Location> PAIR = new Pair<>(ZERO, ZERO);
     private static final Particle particle = Particle.DRIPPING_DRIPSTONE_LAVA;
-    private static final int count = 2;
+    private static final int count = 1;
 
     public static void registerPlayer(Player player){
         if(!locations.containsKey(player)) locations.put(player, PAIR);
@@ -30,9 +30,14 @@ public class FrameToolManager {
     }
 
     public static void showFrame(Player player){
+        Location pos1 = getLocationPair(player).getA();
+        Location pos2 = getLocationPair(player).getB();
+
         Scheduler.async(() -> {
             for(int i = 0; i < 16; i++){
-                player.getWorld().spawnParticle(particle, player.getLocation(), count);
+                player.getWorld().spawnParticle(particle, player.getLocation().add(i / 16f,0.0, 0.0), count);
+                player.getWorld().spawnParticle(particle, player.getLocation().add(0.0,i / 16f, 0.0), count);
+                player.getWorld().spawnParticle(particle, player.getLocation().add(0.0,0.0, i / 16f), count);
             }
         });
     }
