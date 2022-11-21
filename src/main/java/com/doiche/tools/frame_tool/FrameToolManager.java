@@ -6,7 +6,6 @@ import net.minecraft.util.Tuple;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.entity.Player;
-import oshi.util.tuples.Pair;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,9 +1,15 @@
 package com.doiche;
 
 import com.doiche.biomes.BiomeListener;
+import com.doiche.tools.frame_tool.FrameToolCommand;
+import com.doiche.utils.EasyRegistry;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.Server;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.PluginCommand;
+import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
@@ -21,6 +27,9 @@ public class Main extends JavaPlugin {
         Main.plugin = this;
         registerEvents(new Listener[]{
             new BiomeListener()
+        });
+        registerCommands(new TabExecutor[]{
+            new FrameToolCommand()
         });
     }
 
@@ -41,6 +50,15 @@ public class Main extends JavaPlugin {
         PluginManager manager = server.getPluginManager();
         for(Listener listener : listeners){
             manager.registerEvents(listener, this);
+        }
+    }
+
+    private void registerCommands(TabExecutor[] executors){
+        for(TabExecutor executor : executors) {
+            if(executor instanceof EasyRegistry){
+                PluginCommand command = plugin.getCommand(( (EasyRegistry) executor).getKey());
+                if (command != null) command.setExecutor((CommandExecutor) executor);
+            }
         }
     }
 }
