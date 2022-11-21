@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6079462a-03ae-4f12-94a1-a8ec35ac7809" name="Changes" comment="데이터 저장구조 완료.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/doiche/tools/frame_tool/FrameToolCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/doiche/utils/EasyRegistry.java" afterDir="false" />
+    <list default="true" id="6079462a-03ae-4f12-94a1-a8ec35ac7809" name="Changes" comment="EasyRegistry 를 통한 리스트 나열식 레지스터 구조 완성, FrameTool 부분 완성.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/doiche/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/doiche/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/doiche/tools/frame_tool/FrameToolManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/doiche/tools/frame_tool/FrameToolManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668957453726</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="EasyRegistry 를 통한 리스트 나열식 레지스터 구조 완성, FrameTool 부분 완성.">
+      <created>1669039142304</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669039142304</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +170,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="managers add" />
     <MESSAGE value="데이터 저장구조 완료." />
-    <option name="LAST_COMMIT_MESSAGE" value="데이터 저장구조 완료." />
+    <MESSAGE value="EasyRegistry 를 통한 리스트 나열식 레지스터 구조 완성, FrameTool 부분 완성." />
+    <option name="LAST_COMMIT_MESSAGE" value="EasyRegistry 를 통한 리스트 나열식 레지스터 구조 완성, FrameTool 부분 완성." />
   </component>
 </project>
